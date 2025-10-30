@@ -1,10 +1,5 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
-import itana1Img from "@/public/itana1.png";
-import itana2Img from "@/public/itana2.png";
-import h3Img from "@/public/h3.png";
+import { GiMartini, GiMusicalNotes, GiPartyPopper } from "react-icons/gi";
 
 export const links = [
   {
@@ -12,89 +7,85 @@ export const links = [
     hash: "#home",
   },
   {
-    name: "About",
-    hash: "#about",
+    name: "Our Story",
+    hash: "#story",
   },
   {
-    name: "Projects",
-    hash: "#projects",
+    name: "Signature Sips",
+    hash: "#sips",
   },
   {
-    name: "Skills",
-    hash: "#skills",
+    name: "The Vibe",
+    hash: "#vibe",
   },
   {
-    name: "Experience",
-    hash: "#experience",
+    name: "Live Nights",
+    hash: "#nights",
   },
   {
-    name: "Contact",
-    hash: "#contact",
+    name: "Visit Us",
+    hash: "#visit",
   },
 ] as const;
 
 export const experiencesData = [
   {
-    title: "Graduated from YMU",
-    location: "Ukraine",
+    title: "Golden Hour Aperitivo",
+    location: "Fridays · 5 – 7 PM",
     description:
-      "I graduated from YMU and gained Master's degree in 'Organizational Management'. ",
-    icon: React.createElement(LuGraduationCap),
-    date: "2012", 
+      "Sip welcome spritzers as the DJ eases into a sunset groove. Limited snacks pair with citrus-forward cocktails.",
+    icon: React.createElement(GiMartini),
+    date: "Every Friday",
   },
   {
-    title: "Front End Developer",
-    location: "USA",
+    title: "Skyline Sessions",
+    location: "Saturdays · 8 – 11 PM",
     description:
-      "I worked in a start up that providing services to protect IP rights. The service is based on the Ethereum blockchain.",
-    icon: React.createElement(FaReact),
-    date: "May 2022 - September 2022",
+      "Guest vinyl selectors spin nu-disco and house while the bar releases off-menu cosmic pours all night long.",
+    icon: React.createElement(GiMusicalNotes),
+    date: "Saturdays",
   },
   {
-    title: "Front End Developer",
-    location: "USA, NYC",
+    title: "Midnight Ritual",
+    location: "Full Moon · 10 PM – Late",
     description:
-      "I worked as a Front End web developer for more than a year. I was building websites based on the design provided.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2022 - Present",
+      "We dim the lights, ignite the aromatics, and roll out a sensory tasting flight led by Tara’s head alchemist.",
+    icon: React.createElement(GiPartyPopper),
+    date: "Monthly",
   },
-
 ] as const;
 
 export const projectsData = [
   {
-    title: "Itana",
+    title: "Starlight Spritz",
     description:
-      "I worked as a front end web developer on this startup project. The Itana business license is designed to enable tech and service-based businesses.",
-    tags: ["HTML","CSS","Webflow", "JS", "MongoDB"],
-    imageUrl: itana1Img,
+      "Sparkling yuzu, butterfly pea gin, and a citrus cloud that shifts color as you stir. It’s golden hour in a glass.",
+    tags: ["Yuzu gin", "Galaxy bubbles", "Citrus cloud"],
+    gradient: "linear-gradient(135deg, #ffd966 0%, #ff7ad4 50%, #7a67ff 100%)",
   },
   {
-    title: "Itana Africa",
+    title: "Aurora Highball",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["HTML","CSS","Webflow", "JS", "MongoDB"],
-    imageUrl: itana2Img,
+      "Coconut washed rye, pandan vermouth, and neon tonic poured over a glowing ice column. Tropical, bold, luminous.",
+    tags: ["Rye", "Pandan", "Neon tonic"],
+    gradient: "linear-gradient(140deg, #5ef3ff 0%, #5c8dff 45%, #c26dff 100%)",
   },
   {
-    title: "H3Entertainment",
+    title: "Nebula Negroni",
     description:
-      "WEB3 start up that focusing on protecting IP rights. It has features like NFT mining.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind"],
-    imageUrl: h3Img,
+      "Smoked cacao bitters, blood orange aperitif, and galaxy dust. Finished with a spice mist for the perfect nightcap.",
+    tags: ["Smoked cacao", "Blood orange", "Galaxy dust"],
+    gradient: "linear-gradient(130deg, #ff8a65 0%, #ff4a9c 50%, #6f4bff 100%)",
   },
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "MongoDB",
-  "Figma",
-  "Framer Motion",
+  "Neon-drenched lounge & skyline views",
+  "Immersive scent + sound design",
+  "Seasonal chef-driven small plates",
+  "Zero-proof cocktails that still glow",
+  "Resident vinyl DJs & surprise guests",
+  "Private hideaway booths & bottle service",
+  "Interactive mixology classes",
+  "Late-night dessert pairings",
 ] as const;

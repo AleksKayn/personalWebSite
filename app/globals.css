@@ -3,13 +3,28 @@
 @tailwind utilities;
 
 html {
-  --line-color: #e5e7eb;
+  --line-color: rgba(248, 244, 255, 0.18);
 }
 
 html.dark {
-  --line-color: rgba(255, 255, 255, 0.2);
+  --line-color: rgba(255, 255, 255, 0.22);
+}
+
+body {
+  min-height: 100vh;
+  background-attachment: fixed;
 }
 
 .borderBlack {
-  @apply border border-black/10;
+  @apply border border-white/10 dark:border-white/10;
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 12px rgba(255, 139, 255, 0.45);
+  }
+
+  .glassy-card {
+    @apply bg-white/10 backdrop-blur-xl border border-white/10 shadow-[0_25px_70px_rgba(34,10,68,0.35)];
+  }
 }

@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import SectionHeading from "./section-heading";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
@@ -9,41 +8,42 @@ import { motion } from "framer-motion";
 const fadeInAnimationVariants = {
   initial: {
     opacity: 0,
-    y: 100,
+    y: 40,
   },
   animate: (index: number) => ({
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.05 * index,
+      delay: 0.08 * index,
     },
   }),
 };
 
 export default function Skills() {
-  const { ref } = useSectionInView("Skills");
+  const { ref } = useSectionInView("The Vibe");
 
   return (
     <section
-      id="skills"
+      id="vibe"
       ref={ref}
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      className="mb-28 w-full max-w-5xl scroll-mt-28 text-center sm:mb-40"
     >
-      <SectionHeading>My skills</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        {skillsData.map((skill, index) => (
+      <SectionHeading>The Vibe</SectionHeading>
+      <p className="mx-auto max-w-2xl text-white/70">
+        Tara Bar is more than cocktails—it&apos;s a kaleidoscope of light, sound, and flavor designed to keep you orbiting long past midnight.
+      </p>
+      <ul className="mt-12 grid gap-4 text-left sm:grid-cols-2">
+        {skillsData.map((experience, index) => (
           <motion.li
-            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
-            key={index}
+            className="rounded-3xl border border-white/10 bg-white/5 p-6 text-white/80 shadow-[0_18px_45px_rgba(18,4,38,0.35)]"
+            key={experience}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{
-              once: true,
-            }}
+            viewport={{ once: true, amount: 0.3 }}
             custom={index}
           >
-            {skill}
+            {experience}
           </motion.li>
         ))}
       </ul>
