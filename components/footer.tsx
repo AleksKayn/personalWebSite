@@ -1,14 +1,11 @@
-import React from "react";
-
 export default function Footer() {
   return (
-    <footer className="px-4 mb-10 text-center text-gray-500">
-      <small className="block mb-2 text-xs">
-        &copy; 2023 Aleks. All rights reserved.
+    <footer className="px-4 pb-12 text-center text-white/50">
+      <small className="block text-xs uppercase tracking-[0.35em]">
+        © {new Date().getFullYear()} Tara Bar. All nights reserved.
       </small>
-      <p className="text-xs">
-        <span className="font-semibold">About this website:</span> built with
-        ❤️
+      <p className="mt-3 text-xs text-white/40">
+        Crafted with good vibes, neon dreams, and a splash of React.
       </p>
     </footer>
   );
